@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float Speed = 0.1f;
+    public float Speed = 0.05f;
 
     void Start()
     {
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 5f);
     }
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0, 0, Speed);   
+        transform.Translate(new Vector3(0, 0, Speed));   
     }
 
 }

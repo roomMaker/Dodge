@@ -4,33 +4,25 @@ using UnityEngine;
 
 public class BulletSpawner : MonoBehaviour
 {
-    public GameObject BulletPrefab;
+    
     public Transform Player;
-    bool isTarget = false;
-    float time = 0f;
+    public bool isTarget {get; private set;}
     void Start()
     {
-        
+        isTarget = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         if(isTarget)
-            Attack();
-    }
-
-    void Attack()
-    {
-        time += Time.deltaTime;
-        if (time >= Random.Range(0.5f, 1f))
         {
-
-            time = 0f;
-            GameObject bullet = Instantiate(BulletPrefab, transform);
-            bullet.transform.LookAt(Player);
+            gameObject.transform.LookAt(Player);
         }
+        gameObject.transform.Rotate(0, 0.3f, 0);
     }
+
+    
     private void OnTriggerStay(Collider other)
     {
         isTarget = true;
