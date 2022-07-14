@@ -17,7 +17,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Bullet"))
+        if (other.CompareTag("Bullet"))
         {
             Die();
             FindObjectOfType<GameManager>().End();

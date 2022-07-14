@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float Speed = 0.05f;
+    private float Speed = 10f;
 
     void Start()
     {
@@ -13,7 +13,7 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(new Vector3(0, 0, Speed));   
+        transform.Translate(new Vector3(0, 0, Speed * Time.deltaTime));   
     }
 
 }

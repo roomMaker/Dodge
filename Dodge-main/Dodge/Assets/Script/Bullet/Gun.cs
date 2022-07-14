@@ -10,7 +10,7 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
-        if(spawner.isTarget)
+        if(spawner.canShot)
         {
             Attack();
         }
