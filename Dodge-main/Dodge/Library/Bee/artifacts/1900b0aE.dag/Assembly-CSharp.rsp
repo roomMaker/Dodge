@@ -353,6 +353,7 @@
 "Assets/Script/Bullet/BulletSpawner.cs"
 "Assets/Script/Bullet/Gun.cs"
 "Assets/Script/GameManager/GameManager.cs"
+"Assets/Script/Player/FollowCamera.cs"
 "Assets/Script/Player/PlayerHealth.cs"
 "Assets/Script/Player/PlayerInput.cs"
 "Assets/Script/Player/PlayerMovement.cs"

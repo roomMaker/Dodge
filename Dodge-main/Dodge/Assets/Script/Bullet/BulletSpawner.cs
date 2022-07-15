@@ -23,9 +23,13 @@ public class BulletSpawner : MonoBehaviour
     void Update()
     {
         Vector3 targetDir = Player.position - transform.position;
+
         _angle = Vector3.Angle(targetDir, _myVec);
+
         _dot = Vector3.Dot(targetDir, _myVec);
+
         _cross = Vector3.Cross(targetDir, _myVec);
+
         if (isTarget && IsPlayerFront(_dot) && IsAngleSixty(_cross) && _angle > 30)
         {
             gameObject.transform.LookAt(Player);
